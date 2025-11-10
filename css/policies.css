@@ -1,0 +1,195 @@
+/* Policies Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    margin-top: 100px;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+    padding: 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 700;
+    animation: fadeInDown 1s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Introduction Section */
+.intro-section {
+    padding: 3rem 2rem;
+    background: var(--light-gray);
+}
+
+.intro-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeInUp 1s ease;
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    color: var(--dark-gray);
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Policies Section */
+.policies-section {
+    padding: 4rem 2rem;
+    background: var(--white);
+}
+
+.policy-card {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease;
+    border-left: 5px solid var(--primary-orange);
+}
+
+.policy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+.policy-card:nth-child(even) {
+    border-left-color: var(--secondary-orange);
+}
+
+.policy-card:nth-child(3n) {
+    border-left-color: var(--dark-blue);
+}
+
+.policy-number {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.policy-content {
+    padding: 2rem;
+}
+
+.policy-content h3 {
+    font-size: 1.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.policy-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-orange);
+    border-radius: 2px;
+}
+
+.policy-content p {
+    font-size: 1.05rem;
+    color: var(--dark-gray);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger animation for policy cards */
+.policy-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.policy-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.policy-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.policy-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header {
+        margin-top: 80px;
+        padding: 2rem 1rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .intro-section,
+    .policies-section {
+        padding: 2rem 1rem;
+    }
+    
+    .policy-content {
+        padding: 1.5rem;
+    }
+    
+    .policy-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+    }
+}

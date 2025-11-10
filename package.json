@@ -1,0 +1,25 @@
+{
+  "name": "indigenous-languages-website",
+  "version": "1.0.0",
+  "description": "Empowering Indigenous & Local Languages - Namibian National Action Plan",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "indigenous",
+    "languages",
+    "namibia",
+    "unesco"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

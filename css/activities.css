@@ -1,0 +1,517 @@
+/* Activities Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    margin-top: 100px;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+    padding: 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 700;
+    animation: fadeInDown 1s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Task Force Section */
+.taskforce-section {
+    padding: 4rem 2rem;
+    background: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--primary-orange);
+    border-radius: 2px;
+}
+
+.taskforce-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    animation: fadeInUp 1s ease;
+}
+
+.taskforce-content p {
+    font-size: 1.05rem;
+    color: var(--dark-gray);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Feedback Section */
+.feedback-section {
+    padding: 4rem 2rem;
+    background: var(--light-gray);
+}
+
+.feedback-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.feedback-text {
+    animation: fadeInLeft 1s ease;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-text h2 {
+    font-size: 2rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.feedback-text p {
+    font-size: 1.05rem;
+    color: var(--dark-gray);
+    line-height: 1.8;
+}
+
+.feedback-card {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    animation: fadeInRight 1s ease;
+    transition: transform 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-5px);
+}
+
+.feedback-card h3 {
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.feedback-card p {
+    font-size: 1.05rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.cta-button {
+    background: var(--white);
+    color: var(--primary-orange);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: var(--cream);
+}
+
+/* Consultations Section */
+.consultations-section {
+    padding: 4rem 2rem;
+    background: var(--white);
+}
+
+.consultation-intro {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+    animation: fadeInUp 1s ease;
+}
+
+.consultation-intro-image {
+    width: 100%;
+}
+
+.intro-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.intro-image:hover {
+    transform: scale(1.03);
+}
+
+.consultation-intro p {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.consultation-card {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    animation: fadeInUp 0.8s ease;
+}
+
+.consultation-card.reverse {
+    direction: rtl;
+}
+
+.consultation-card.reverse > * {
+    direction: ltr;
+}
+
+.consultation-image {
+    position: relative;
+}
+
+.activity-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.activity-image:hover {
+    transform: scale(1.03);
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    font-style: italic;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+.consultation-text h3 {
+    font-size: 1.8rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.consultation-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-orange);
+    border-radius: 2px;
+}
+
+.consultation-text p {
+    font-size: 1.05rem;
+    color: var(--dark-gray);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Ongoing Sessions Section */
+.ongoing-section {
+    padding: 4rem 2rem;
+    background: var(--light-gray);
+    text-align: center;
+}
+
+.section-intro {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    font-style: italic;
+    margin-top: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+/* Engagement Section */
+.engagement-section {
+    padding: 4rem 2rem;
+    background: var(--white);
+}
+
+.engagement-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.engagement-text {
+    animation: fadeInLeft 1s ease;
+}
+
+.engagement-text h2 {
+    font-size: 2rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.engagement-text h3 {
+    font-size: 1.3rem;
+    color: var(--primary-orange);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.engagement-text p {
+    font-size: 1.05rem;
+    color: var(--dark-gray);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.engagement-gallery {
+    animation: fadeInRight 1s ease;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    background: #000;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carousel-img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--dark-brown);
+    border: none;
+    padding: 1rem 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carousel-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dots span:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-dots span.active {
+    background: white;
+    width: 30px;
+    border-radius: 5px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .feedback-content,
+    .consultation-card,
+    .engagement-content,
+    .consultation-intro {
+        grid-template-columns: 1fr;
+    }
+    
+    .consultation-card.reverse {
+        direction: ltr;
+    }
+    
+    .engagement-prev {
+        left: 10px;
+    }
+    
+    .engagement-next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        margin-top: 80px;
+        padding: 2rem 1rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .taskforce-section,
+    .feedback-section,
+    .consultations-section,
+    .ongoing-section,
+    .engagement-section {
+        padding: 3rem 1rem;
+    }
+    
+    .taskforce-content,
+    .feedback-card {
+        padding: 2rem;
+    }
+    
+    .feedback-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .consultation-text h3,
+    .engagement-text h2 {
+        font-size: 1.5rem;
+    }
+}

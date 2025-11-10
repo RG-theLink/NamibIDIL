@@ -1,0 +1,234 @@
+/* Themes Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    margin-top: 100px;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+    padding: 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 700;
+    animation: fadeInDown 1s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Themes Section */
+.themes-section {
+    padding: 5rem 2rem;
+    background: var(--white);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.themes-slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease;
+}
+
+.themes-slide {
+    display: none;
+    width: 100%;
+}
+
+.themes-slide.active {
+    display: block;
+    animation: fadeSlide 0.5s ease;
+}
+
+.theme-link {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-link:hover {
+    transform: scale(1.02);
+}
+
+.theme-link::after {
+    content: 'Click To View';
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+}
+
+.themes-slide:not(:first-child) .theme-link:hover::after {
+    opacity: 1;
+}
+
+.theme-image {
+    width: 600px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
+    animation: float 6s ease-in-out infinite;
+}
+
+.theme-prev,
+.theme-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-orange);
+    color: white;
+    border: 3px solid white;
+    padding: 1rem 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.theme-prev:hover,
+.theme-next:hover {
+    background: var(--secondary-orange);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.theme-prev {
+    left: -70px;
+}
+
+.theme-next {
+    right: -70px;
+}
+
+.theme-dots {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.theme-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(210, 105, 30, 0.3);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-dot:hover {
+    background: rgba(210, 105, 30, 0.6);
+    transform: scale(1.2);
+}
+
+.theme-dot.active {
+    background: var(--primary-orange);
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* Animations */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .theme-prev {
+        left: 10px;
+    }
+    
+    .theme-next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        margin-top: 80px;
+        padding: 2rem 1rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .themes-section {
+        padding: 3rem 1rem;
+    }
+}

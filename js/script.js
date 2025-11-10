@@ -218,4 +218,72 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
+// Carousel functionality
+let carouselIndex = 0;
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselImages = document.querySelectorAll('.carousel-img');
+const carouselDotsContainer = document.querySelector('.carousel-dots');
+
+// Create dots
+if (carouselImages.length > 0 && carouselDotsContainer) {
+    carouselImages.forEach((_, index) => {
+        const dot = document.createElement('span');
+        if (index === 0) dot.classList.add('active');
+        dot.onclick = () => goToSlide(index);
+        carouselDotsContainer.appendChild(dot);
+    });
+}
+
+const carouselDots = document.querySelectorAll('.carousel-dots span');
+
+function updateCarousel() {
+    if (!carouselTrack) return;
+    
+    const offset = -carouselIndex * 100;
+    carouselTrack.style.transform = `translateX(${offset}%)`;
+    
+    // Update dots
+    carouselDots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === carouselIndex);
+    });
+}
+
+function moveCarousel(direction) {
+    carouselIndex += direction;
+    
+    if (carouselIndex < 0) {
+        carouselIndex = carouselImages.length - 1;
+    } else if (carouselIndex >= carouselImages.length) {
+        carouselIndex = 0;
+    }
+    
+    updateCarousel();
+}
+
+function goToSlide(index) {
+    carouselIndex = index;
+    updateCarousel();
+}
+
+// Auto-advance carousel
+if (carouselImages.length > 0) {
+    let carouselInterval = setInterval(() => {
+        moveCarousel(1);
+    }, 5000);
+    
+    // Pause on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(carouselInterval);
+        });
+        
+        carouselContainer.addEventListener('mouseleave', () => {
+            carouselInterval = setInterval(() => {
+                moveCarousel(1);
+            }, 5000);
+        });
+    }
+}
+
 console.log('Website loaded successfully!');

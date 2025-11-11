@@ -89,6 +89,9 @@ if (mobileMenuToggle && navMenu) {
         if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
             navMenu.classList.remove('active');
             mobileMenuToggle.classList.remove('active');
+            // Close all dropdowns when menu closes
+            document.querySelectorAll('.dropdown.active').forEach(d => d.classList.remove('active'));
+            document.querySelectorAll('.dropdown-nested.active').forEach(d => d.classList.remove('active'));
         }
     });
     
@@ -100,6 +103,16 @@ if (mobileMenuToggle && navMenu) {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Close other dropdowns at the same level
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
                     dropdown.classList.toggle('active');
                 }
             });
@@ -114,10 +127,20 @@ if (mobileMenuToggle && navMenu) {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Toggle nested dropdown
                     nested.classList.toggle('active');
                 }
             });
         }
+    });
+    
+    // Prevent dropdown content clicks from closing the dropdown
+    document.querySelectorAll('.dropdown-content, .dropdown-submenu').forEach(content => {
+        content.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
     });
 }
 

@@ -1,0 +1,50 @@
+/* Resources Page Styles */
+
+:root {
+    --resources-primary: #b8860b;
+    --resources-dark: #8b6914;
+}
+
+/* Page Header */
+.page-header {
+    margin-top: 140px;
+    background: linear-gradient(135deg, var(--resources-primary) 0%, var(--resources-dark) 100%);
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--dark-brown);
+    font-weight: 700;
+}
+
+/* Coming Soon Section */
+.coming-soon-section {
+    padding: 3rem 2rem;
+    background: white;
+    text-align: center;
+    min-height: 200px;
+}
+
+.coming-soon-text {
+    font-size: 1.5rem;
+    color: var(--dark-brown);
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header {
+        margin-top: 80px;
+        padding: 2rem 1rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .coming-soon-text {
+        font-size: 1.2rem;
+    }
+}

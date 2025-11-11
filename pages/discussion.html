@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum - Empowering Indigenous & Local Languages</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/InternationalIDILLogoTransparent.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/InternationalIDILLogoTransparent.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../images/InternationalIDILLogoTransparent.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../images/InternationalIDILLogoTransparent.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/InternationalIDILLogoTransparent.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/discussion.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="../images/InternationalIDILLogoTransparent.png" alt="IDIL Logo" class="logo">
+                <div class="logo-text">
+                    <span class="logo-title">Empowering Indigenous &</span>
+                    <span class="logo-subtitle">Local Languages</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#namibia" class="nav-link">Namibia</a>
+                    <div class="dropdown-content">
+                        <a href="languages.html">Languages</a>
+                        <a href="policies.html">Policies</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <span class="nav-link">National Action Plan</span>
+                    <div class="dropdown-content">
+                        <a href="statements.html">Statements</a>
+                        <a href="activities.html">Activities</a>
+                        <div class="dropdown-nested">
+                            <a href="themes.html" class="has-submenu">Themes ›</a>
+                            <div class="dropdown-submenu">
+                                <a href="research.html">Documentation & Research</a>
+                                <a href="learning.html">Learning</a>
+                                <a href="health.html">Health and Wellbeing</a>
+                                <a href="biodiversity.html">Biodiversity</a>
+                                <a href="cultural.html">Cultural Expressions & Communication</a>
+                                <a href="enabling.html">Enabling Inclusive Environments</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="initiatives.html" class="nav-link">Initiatives</a></li>
+                <li><a href="stakeholders.html" class="nav-link">Stakeholders</a></li>
+                <li class="dropdown">
+                    <a href="#engagement" class="nav-link active">Engagement</a>
+                    <div class="dropdown-content">
+                        <a href="feedback.html">Feedback</a>
+                        <a href="discussion.html">Discussion Forum</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="events.html">Events</a>
+                    </div>
+                </li>
+                <li><a href="join.html" class="nav-link join-btn">Join Us</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1 class="page-title">Discussion Forum</h1>
+            <p class="page-subtitle">Join the conversation about Indigenous languages and knowledge systems</p>
+        </div>
+    </section>
+
+    <!-- Forum Section -->
+    <section class="forum-section">
+        <div class="container">
+            
+            <!-- Forum Header with New Post Button -->
+            <div class="forum-header">
+                <div class="forum-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">247</span>
+                        <span class="stat-label">Discussions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1,523</span>
+                        <span class="stat-label">Comments</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">342</span>
+                        <span class="stat-label">Members</span>
+                    </div>
+                </div>
+                <button class="new-post-btn" id="newPostBtn">
+                    <span class="btn-icon">+</span> New Discussion
+                </button>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="categories-section">
+                <h2 class="section-title">Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="all">
+                        <div class="category-icon">🌍</div>
+                        <h3>All Topics</h3>
+                        <p class="category-count">247 discussions</p>
+                    </div>
+                    <div class="category-card" data-category="languages">
+                        <div class="category-icon">💬</div>
+                        <h3>Language Preservation</h3>
+                        <p class="category-count">89 discussions</p>
+                    </div>
+                    <div class="category-card" data-category="education">
+                        <div class="category-icon">📚</div>
+                        <h3>Education & Learning</h3>
+                        <p class="category-count">64 discussions</p>
+                    </div>
+                    <div class="category-card" data-category="culture">
+                        <div class="category-icon">🎭</div>
+                        <h3>Cultural Heritage</h3>
+                        <p class="category-count">52 discussions</p>
+                    </div>
+                    <div class="category-card" data-category="technology">
+                        <div class="category-icon">💻</div>
+                        <h3>Technology & Innovation</h3>
+                        <p class="category-count">28 discussions</p>
+                    </div>
+                    <div class="category-card" data-category="policy">
+                        <div class="category-icon">📋</div>
+                        <h3>Policy & Advocacy</h3>
+                        <p class="category-count">14 discussions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discussions List -->
+            <div class="discussions-section">
+                <div class="discussions-header">
+                    <h2 class="section-title">Recent Discussions</h2>
+                    <div class="filter-controls">
+                        <select id="sortFilter" class="filter-select">
+                            <option value="recent">Most Recent</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="active">Most Active</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="discussions-list" id="discussionsList">
+                    <!-- Discussion items will be dynamically loaded here -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Discussion Detail Modal -->
+    <div class="modal" id="discussionDetailModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <div>
+                    <h2 id="detailTitle"></h2>
+                    <div class="detail-meta">
+                        <span>👤 <span id="detailAuthor"></span></span>
+                        <span>🕒 <span id="detailTimestamp"></span></span>
+                        <span class="detail-category">📁 <span id="detailCategory"></span></span>
+                    </div>
+                </div>
+                <button class="close-modal" id="closeDetailModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="discussion-detail-content">
+                    <p id="detailContent"></p>
+                </div>
+                
+                <div class="replies-section">
+                    <h3 class="replies-title">Replies</h3>
+                    <div class="replies-container" id="repliesContainer">
+                        <!-- Replies will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="reply-form-section">
+                    <h3 class="reply-form-title">Add Your Reply</h3>
+                    <form class="reply-form" id="replyForm">
+                        <div class="form-group">
+                            <label for="replyAuthor">Your Name <span class="required">*</span></label>
+                            <input type="text" id="replyAuthor" name="replyAuthor" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="replyContent">Your Reply <span class="required">*</span></label>
+                            
+                            <!-- Formatting Toolbar -->
+                            <div class="formatting-toolbar">
+                                <button type="button" class="format-btn" onclick="insertFormatting('bold')" title="Bold">
+                                    <strong>B</strong>
+                                </button>
+                                <button type="button" class="format-btn" onclick="insertFormatting('italic')" title="Italic">
+                                    <em>I</em>
+                                </button>
+                                <div class="toolbar-divider"></div>
+                                <button type="button" class="emoji-btn" onclick="insertEmoji('😊')" title="Happy">😊</button>
+                                <button type="button" class="emoji-btn" onclick="insertEmoji('👍')" title="Thumbs up">👍</button>
+                                <button type="button" class="emoji-btn" onclick="insertEmoji('❤️')" title="Heart">❤️</button>
+                                <button type="button" class="emoji-btn" onclick="insertEmoji('🎉')" title="Celebration">🎉</button>
+                                <button type="button" class="emoji-btn" onclick="insertEmoji('💡')" title="Idea">💡</button>
+                                <button type="button" class="emoji-btn" onclick="insertEmoji('🤔')" title="Thinking">🤔</button>
+                                <button type="button" class="emoji-btn" onclick="insertEmoji('📚')" title="Books">📚</button>
+                                <button type="button" class="emoji-btn" onclick="insertEmoji('🌍')" title="World">🌍</button>
+                            </div>
+                            
+                            <textarea id="replyContent" name="replyContent" rows="5" placeholder="Share your thoughts... Use **bold** or *italic* for formatting" required></textarea>
+                            <div class="format-hint">
+                                💡 Tip: Use **text** for bold, *text* for italic
+                            </div>
+                        </div>
+                        
+                        <div class="modal-actions">
+                            <button type="submit" class="btn-submit">Post Reply</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Post Modal -->
+    <div class="modal" id="newPostModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Start a New Discussion</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <form class="new-post-form" id="newPostForm">
+                <div class="form-group">
+                    <label for="postTitle">Discussion Title <span class="required">*</span></label>
+                    <input type="text" id="postTitle" name="postTitle" placeholder="What would you like to discuss?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="postCategory">Category <span class="required">*</span></label>
+                    <select id="postCategory" name="postCategory" required>
+                        <option value="">Select a category</option>
+                        <option value="languages">Language Preservation</option>
+                        <option value="education">Education & Learning</option>
+                        <option value="culture">Cultural Heritage</option>
+                        <option value="technology">Technology & Innovation</option>
+                        <option value="policy">Policy & Advocacy</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="postContent">Your Message <span class="required">*</span></label>
+                    <textarea id="postContent" name="postContent" rows="8" placeholder="Share your thoughts, questions, or ideas..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="postAuthor">Your Name <span class="required">*</span></label>
+                    <input type="text" id="postAuthor" name="postAuthor" placeholder="Enter your name" required>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn-submit">Post Discussion</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us Today</h3>
+                    <p><a href="feedback.html">Feedback</a></p>
+                    <p>hwinschiers@nust.na</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon facebook"></a>
+                        <a href="#" class="social-icon instagram"></a>
+                        <a href="#" class="social-icon twitter"></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacts</h3>
+                    <p><strong>Prof. Heike Winschiers Theophilus</strong></p>
+                    <p>UNESCO Chair in Digital Technology Design with Marginalised Communities</p>
+                    <p><strong>Ms. Nashilongo Amutenya</strong></p>
+                    <p>UNESCO Science Project Assistant</p>
+                    <p>CD.amutenya@unesco.org</p>
+                </div>
+                <div class="footer-logos">
+                    <img src="../images/InternationalIDILLogoTransparent.png" alt="IDIL Logo" class="footer-logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/discussion.js"></script>
+</body>
+</html>
